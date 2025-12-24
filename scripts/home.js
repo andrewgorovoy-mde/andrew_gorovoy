@@ -16,41 +16,73 @@ class HomePage {
     init() {
         this.setupButtonClicks();
         
-        // Setup canvases after a short delay to ensure page is visible
-        // This handles the case where the door animation needs to complete first
-        setTimeout(() => {
-            this.setupButtonCanvases();
-        }, 500);
+        // Setup canvases when main content is revealed (after door opens)
+        const mainContent = document.getElementById('main-content');
+        if (mainContent) {
+            // Check if already revealed
+            if (mainContent.classList.contains('revealed') || document.body.classList.contains('entered')) {
+                setTimeout(() => {
+                    this.setupButtonCanvases();
+                }, 100);
+            }
+            
+            // Also watch for when main content becomes visible
+            const observer = new MutationObserver(() => {
+                if (mainContent.classList.contains('revealed') || document.body.classList.contains('entered')) {
+                    setTimeout(() => {
+                        this.setupButtonCanvases();
+                    }, 100);
+                }
+            });
+            observer.observe(mainContent, { attributes: true, attributeFilter: ['class'] });
+            observer.observe(document.body, { attributes: true, attributeFilter: ['class'] });
+        }
         
         // Also set up when home page becomes active
         const homePage = document.getElementById('home');
         if (homePage) {
-            const observer = new MutationObserver(() => {
+            const pageObserver = new MutationObserver(() => {
                 if (homePage.classList.contains('active')) {
                     setTimeout(() => {
                         this.setupButtonCanvases();
                     }, 100);
                 }
             });
-            observer.observe(homePage, { attributes: true, attributeFilter: ['class'] });
+            pageObserver.observe(homePage, { attributes: true, attributeFilter: ['class'] });
         }
         
         // Redraw on window resize
         window.addEventListener('resize', () => {
             this.setupButtonCanvases();
         });
+        
+        // Also try initial setup after a delay (fallback)
+        setTimeout(() => {
+            this.setupButtonCanvases();
+        }, 1500);
     }
 
     /**
      * Setup canvas for each navigation button
      */
     setupButtonCanvases() {
+        // Only draw if main content is visible
+        const mainContent = document.getElementById('main-content');
+        if (!mainContent || (!mainContent.classList.contains('revealed') && !document.body.classList.contains('entered'))) {
+            return;
+        }
+
         this.navButtons.forEach(button => {
             const canvas = button.querySelector('.nav-button-canvas');
             if (!canvas) return;
 
             // Set canvas size to match button size
             const rect = button.getBoundingClientRect();
+            // Only draw if button has valid dimensions
+            if (rect.width === 0 || rect.height === 0) {
+                return;
+            }
+            
             canvas.width = rect.width;
             canvas.height = rect.height;
 
