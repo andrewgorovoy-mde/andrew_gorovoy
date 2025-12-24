@@ -1,0 +1,158 @@
+/**
+ * Component Styles
+ * Styles for reusable components like buttons, cards, etc.
+ */
+
+/* ============================================
+   Buttons
+   ============================================ */
+.btn {
+    display: inline-block;
+    padding: var(--spacing-sm) var(--spacing-md);
+    border: 2px solid var(--color-black);
+    background-color: var(--color-white);
+    color: var(--color-black);
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-align: center;
+}
+
+.btn:hover {
+    background-color: var(--color-black);
+    color: var(--color-white);
+    opacity: 1;
+}
+
+.btn-primary {
+    background-color: var(--color-black);
+    color: var(--color-white);
+}
+
+.btn-primary:hover {
+    background-color: var(--color-white);
+    color: var(--color-black);
+}
+
+/* ============================================
+   Project Cards
+   ============================================ */
+.project-card {
+    border: 2px solid var(--color-black);
+    padding: var(--spacing-md);
+    background-color: var(--color-white);
+    position: relative;
+    transition: transform 0.3s ease;
+    min-height: 250px;
+    display: flex;
+    flex-direction: column;
+}
+
+.project-card:hover {
+    transform: translateY(-5px);
+}
+
+.project-card-title {
+    font-size: var(--font-size-xl);
+    margin-bottom: var(--spacing-sm);
+    border-bottom: 2px solid var(--color-black);
+    padding-bottom: var(--spacing-xs);
+}
+
+.project-card-description {
+    flex-grow: 1;
+    margin-bottom: var(--spacing-sm);
+    color: var(--color-gray-dark);
+}
+
+.project-card-technologies {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--spacing-xs);
+    margin-bottom: var(--spacing-sm);
+}
+
+.technology-tag {
+    padding: 0.25rem var(--spacing-xs);
+    border: 1px solid var(--color-black);
+    font-size: var(--font-size-sm);
+    background-color: var(--color-white);
+}
+
+.project-card-link {
+    margin-top: auto;
+    display: inline-block;
+    text-align: center;
+}
+
+/* ============================================
+   Contact Links
+   ============================================ */
+.contact-link {
+    padding: var(--spacing-sm) var(--spacing-md);
+    border: 2px solid var(--color-black);
+    background-color: var(--color-white);
+    display: inline-block;
+    font-weight: 600;
+    min-width: 120px;
+    text-align: center;
+}
+
+.contact-link:hover {
+    background-color: var(--color-black);
+    color: var(--color-white);
+    opacity: 1;
+}
+
+/* ============================================
+   Canvas Containers
+   ============================================ */
+.canvas-container {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+canvas {
+    display: block;
+}
+
+/* ============================================
+   Utility Classes
+   ============================================ */
+.text-center {
+    text-align: center;
+}
+
+.text-left {
+    text-align: left;
+}
+
+.text-right {
+    text-align: right;
+}
+
+.mt-sm {
+    margin-top: var(--spacing-sm);
+}
+
+.mt-md {
+    margin-top: var(--spacing-md);
+}
+
+.mt-lg {
+    margin-top: var(--spacing-lg);
+}
+
+.mb-sm {
+    margin-bottom: var(--spacing-sm);
+}
+
+.mb-md {
+    margin-bottom: var(--spacing-md);
+}
+
+.mb-lg {
+    margin-bottom: var(--spacing-lg);
+}
+

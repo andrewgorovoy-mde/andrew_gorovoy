@@ -1,0 +1,22 @@
+{
+  "name": "portfolio",
+  "version": "1.0.0",
+  "description": "Personal portfolio site with hand-drawn sketchy style using Rough.js",
+  "main": "index.html",
+  "scripts": {
+    "dev": "npx serve .",
+    "build": "echo 'No build step needed for static site'"
+  },
+  "keywords": [
+    "portfolio",
+    "roughjs",
+    "sketchy"
+  ],
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "roughjs": "^4.6.6"
+  },
+  "devDependencies": {}
+}
+

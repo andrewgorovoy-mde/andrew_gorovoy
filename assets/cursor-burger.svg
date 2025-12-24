@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+  <!-- Bottom bun -->
+  <ellipse cx="12" cy="18" rx="8" ry="2" fill="#D4A574" stroke="#000000" stroke-width="1"/>
+  <!-- Top bun -->
+  <ellipse cx="12" cy="6" rx="8" ry="3" fill="#D4A574" stroke="#000000" stroke-width="1"/>
+  <!-- Burger patty -->
+  <ellipse cx="12" cy="11" rx="7" ry="2.5" fill="#8B4513" stroke="#000000" stroke-width="1"/>
+  <!-- Cheese -->
+  <path d="M5 9 Q12 10 19 9" stroke="#FFD700" stroke-width="2" fill="none" stroke-linecap="round"/>
+  <path d="M5 13 Q12 14 19 13" stroke="#FFD700" stroke-width="2" fill="none" stroke-linecap="round"/>
+  <!-- Sesame seeds -->
+  <circle cx="9" cy="5" r="0.8" fill="#FFFFFF" stroke="#000000" stroke-width="0.5"/>
+  <circle cx="15" cy="4" r="0.8" fill="#FFFFFF" stroke="#000000" stroke-width="0.5"/>
+  <circle cx="11" cy="3.5" r="0.8" fill="#FFFFFF" stroke="#000000" stroke-width="0.5"/>
+</svg>
+

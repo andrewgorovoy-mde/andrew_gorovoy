@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Portfolio site with hand-drawn sketchy style">
+    <title>Andrew Gorovoy</title>
+    
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="styles/components.css">
+    <link rel="stylesheet" href="styles/entry.css">
+    <link rel="stylesheet" href="styles/pages.css">
+</head>
+<body>
+    <!-- Entry Screen - Door that opens to reveal the site -->
+    <div id="entry-screen">
+        <canvas id="door-canvas"></canvas>
+        <p class="entry-hint">click the door to enter</p>
+    </div>
+
+    <!-- Main Content - Hidden until door opens -->
+    <div id="main-content">
+        <!-- Home Page -->
+        <section id="home" class="page active">
+            <div class="home-container">
+                <h1 class="home-name">Andrew Gorovoy</h1>
+                <nav class="home-nav">
+                    <button class="nav-button" data-page="about">
+                        <canvas class="nav-button-canvas"></canvas>
+                        <span class="nav-button-text">ABOUT</span>
+                    </button>
+                    <button class="nav-button" data-page="design">
+                        <canvas class="nav-button-canvas"></canvas>
+                        <span class="nav-button-text">DESIGN</span>
+                    </button>
+                    <button class="nav-button" data-page="comedy">
+                        <canvas class="nav-button-canvas"></canvas>
+                        <span class="nav-button-text">COMEDY</span>
+                    </button>
+                    <button class="nav-button" data-page="writing">
+                        <canvas class="nav-button-canvas"></canvas>
+                        <span class="nav-button-text">WRITING</span>
+                    </button>
+                    <button class="nav-button" data-page="links">
+                        <canvas class="nav-button-canvas"></canvas>
+                        <span class="nav-button-text">LINKS</span>
+                    </button>
+                </nav>
+            </div>
+        </section>
+
+        <!-- About Page -->
+        <section id="about" class="page">
+            <div class="page-container">
+                <button class="back-button" data-back="home">← Back</button>
+                <h2 class="page-title">About</h2>
+                <div class="page-content">
+                    <p>Add your about content here.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Design Page -->
+        <section id="design" class="page">
+            <div class="page-container">
+                <button class="back-button" data-back="home">← Back</button>
+                <h2 class="page-title">Design</h2>
+                <div class="page-content">
+                    <p>Add your design work here.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Comedy Page -->
+        <section id="comedy" class="page">
+            <div class="page-container">
+                <button class="back-button" data-back="home">← Back</button>
+                <h2 class="page-title">Comedy</h2>
+                <div class="page-content">
+                    <p>Add your comedy work here.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Writing Page -->
+        <section id="writing" class="page">
+            <div class="page-container">
+                <button class="back-button" data-back="home">← Back</button>
+                <h2 class="page-title">Writing</h2>
+                <div class="page-content">
+                    <p>Add your writing work here.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Links Page -->
+        <section id="links" class="page">
+            <div class="page-container">
+                <button class="back-button" data-back="home">← Back</button>
+                <h2 class="page-title">Links</h2>
+                <div class="page-content">
+                    <p>Add your links here.</p>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <!-- Scripts -->
+    <!-- Rough.js library -->
+    <script src="https://unpkg.com/roughjs@4.6.6/bundled/rough.js"></script>
+    
+    <!-- Our custom scripts -->
+    <script src="scripts/rough-drawer.js"></script>
+    <script src="scripts/entry-door.js"></script>
+    <script src="scripts/pages.js"></script>
+    <script src="scripts/home.js"></script>
+    <script src="scripts/main.js"></script>
+</body>
+</html>
