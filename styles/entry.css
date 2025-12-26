@@ -5,17 +5,17 @@
  */
 
 /* ============================================
-   Custom Cheeseburger Cursor
+   Custom Retro Cursor (Pixelated)
    ============================================ */
 body {
-    cursor: url('../assets/cursor-burger.svg') 12 12, crosshair;
+    cursor: url('../assets/cursor-retro.svg') 1 1, crosshair;
 }
 
 body a,
 body button,
 body [role="button"],
 .door-hover {
-    cursor: url('../assets/cursor-burger-hover.svg') 12 12, pointer;
+    cursor: url('../assets/cursor-retro-hover.svg') 1 1, pointer;
 }
 
 /* ============================================
@@ -50,7 +50,7 @@ body [role="button"],
    Door Hover State
    ============================================ */
 #door-canvas.door-hover {
-    cursor: url('../assets/cursor-burger-hover.svg') 12 12, pointer;
+    cursor: url('../assets/cursor-retro-hover.svg') 1 1, pointer;
 }
 
 /* ============================================
@@ -142,16 +142,17 @@ body.entered #main-content {
    ============================================ */
 .entry-hint {
     position: absolute;
-    bottom: 15%;
+    bottom: 5%;
     left: 50%;
     transform: translateX(-50%);
     font-size: var(--font-size-sm);
     color: var(--color-black);
     opacity: 0;
     animation: hintFadeIn 0.5s ease forwards;
-    animation-delay: 3s;
+    animation-delay: 1s;
     text-align: center;
     pointer-events: none;
+    z-index: 10000;
 }
 
 @keyframes hintFadeIn {

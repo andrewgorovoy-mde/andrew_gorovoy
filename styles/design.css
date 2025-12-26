@@ -1,0 +1,112 @@
+/**
+ * Design Section Styles
+ * 
+ * Styles for the design projects grid and project detail pages.
+ */
+
+/* ============================================
+   Design Projects Grid
+   ============================================ */
+.design-projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+    gap: var(--spacing-lg);
+    margin-top: var(--spacing-lg);
+}
+
+/* ============================================
+   Design Project Card
+   ============================================ */
+.design-project-card {
+    position: relative;
+    cursor: url('../assets/cursor-retro-hover.svg') 1 1, pointer;
+    transition: transform 0.3s ease;
+}
+
+.design-project-card:hover {
+    transform: translateY(-5px);
+}
+
+.design-project-canvas {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 10;
+}
+
+.design-project-content {
+    position: relative;
+    z-index: 1;
+    padding: var(--spacing-md);
+    background-color: var(--color-white);
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.design-project-image {
+    width: 100%;
+    height: 300px;
+    object-fit: contain;
+    object-position: center;
+    display: block;
+    margin-bottom: var(--spacing-sm);
+    filter: grayscale(100%);
+    background-color: var(--color-white);
+}
+
+.design-project-title {
+    font-size: var(--font-size-base);
+    font-weight: 700;
+    color: var(--color-black);
+    margin: 0;
+    text-align: center;
+}
+
+/* ============================================
+   Project Detail Page
+   ============================================ */
+.project-detail-content {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.project-detail-image {
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin-bottom: var(--spacing-lg);
+    filter: grayscale(100%);
+}
+
+.project-detail-title {
+    font-size: var(--font-size-xxl);
+    font-weight: 700;
+    margin-bottom: var(--spacing-md);
+    text-align: left;
+}
+
+.project-detail-description {
+    font-size: var(--font-size-base);
+    line-height: 1.8;
+    margin-bottom: var(--spacing-lg);
+}
+
+/* ============================================
+   Responsive Design
+   ============================================ */
+@media (max-width: 768px) {
+    .design-projects-grid {
+        grid-template-columns: 1fr;
+        gap: var(--spacing-md);
+    }
+    
+    .design-project-image {
+        height: 250px;
+    }
+}
+

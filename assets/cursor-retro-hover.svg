@@ -1,0 +1,34 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" shape-rendering="crispEdges">
+  <!-- Pixelated retro cursor - hover state -->
+  <!-- Each pixel is 2x2 units for clear pixelation -->
+  
+  <!-- Row 1: Tip -->
+  <rect x="0" y="0" width="4" height="4" fill="#000000"/>
+  <rect x="4" y="0" width="4" height="4" fill="#000000"/>
+  
+  <!-- Row 2 -->
+  <rect x="0" y="4" width="4" height="4" fill="#000000"/>
+  <rect x="4" y="4" width="4" height="4" fill="#FFFFFF"/>
+  <rect x="8" y="4" width="4" height="4" fill="#000000"/>
+  
+  <!-- Row 3 -->
+  <rect x="0" y="8" width="4" height="4" fill="#000000"/>
+  <rect x="4" y="8" width="4" height="4" fill="#FFFFFF"/>
+  <rect x="8" y="8" width="4" height="4" fill="#FFFFFF"/>
+  <rect x="12" y="8" width="4" height="4" fill="#000000"/>
+  
+  <!-- Row 4 -->
+  <rect x="0" y="12" width="4" height="4" fill="#000000"/>
+  <rect x="4" y="12" width="4" height="4" fill="#FFFFFF"/>
+  <rect x="8" y="12" width="4" height="4" fill="#FFFFFF"/>
+  <rect x="12" y="12" width="4" height="4" fill="#FFFFFF"/>
+  <rect x="16" y="12" width="4" height="4" fill="#000000"/>
+  
+  <!-- Row 5: Base -->
+  <rect x="12" y="16" width="4" height="4" fill="#000000"/>
+  <rect x="16" y="16" width="4" height="4" fill="#000000"/>
+  <rect x="20" y="16" width="4" height="4" fill="#000000"/>
+  
+  <!-- Row 6: Tail -->
+  <rect x="20" y="20" width="4" height="4" fill="#000000"/>
+</svg>

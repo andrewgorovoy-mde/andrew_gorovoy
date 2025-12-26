@@ -1,0 +1,199 @@
+/**
+ * Toolbox Styles
+ * 
+ * Styles for the toolbox and Fallout-style popup menu.
+ */
+
+/* ============================================
+   Toolbox Container (Bottom Right)
+   ============================================ */
+.toolbox-container {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 80px;
+    height: 80px;
+    cursor: url('../assets/cursor-retro-hover.svg') 1 1, pointer;
+    z-index: 1000;
+    transition: transform 0.2s ease, opacity 0.3s ease;
+    opacity: 0;
+    pointer-events: none;
+}
+
+/* Show toolbox when main content is revealed */
+body.entered .toolbox-container {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+#main-content.revealed ~ .toolbox-container {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.toolbox-container:hover {
+    transform: scale(1.1);
+}
+
+#toolbox-canvas {
+    width: 100%;
+    height: 100%;
+    display: block;
+    pointer-events: none;
+}
+
+/* ============================================
+   Toolbox Popup (Fallout-style)
+   ============================================ */
+.toolbox-popup {
+    position: fixed;
+    bottom: 120px;
+    right: 20px;
+    width: 400px;
+    max-height: 500px;
+    background-color: var(--color-black);
+    border: 3px solid var(--color-white);
+    display: none;
+    z-index: 1001;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+    visibility: hidden;
+    opacity: 0;
+    transition: opacity 0.2s ease, visibility 0.2s ease;
+}
+
+.toolbox-popup.active {
+    display: block;
+    visibility: visible;
+    opacity: 1;
+}
+
+/* Fallout-style header */
+.toolbox-popup-header {
+    background-color: var(--color-white);
+    color: var(--color-black);
+    padding: 10px 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 3px solid var(--color-black);
+}
+
+.toolbox-popup-title {
+    margin: 0;
+    font-size: var(--font-size-base);
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+.toolbox-popup-close {
+    background: transparent;
+    border: 2px solid var(--color-black);
+    color: var(--color-black);
+    font-size: 24px;
+    line-height: 1;
+    width: 30px;
+    height: 30px;
+    cursor: url('../assets/cursor-retro-hover.svg') 1 1, pointer;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.toolbox-popup-close:hover {
+    background-color: var(--color-black);
+    color: var(--color-white);
+}
+
+/* Tools list */
+.toolbox-tools-list {
+    padding: 15px;
+    max-height: 450px;
+    overflow-y: auto;
+}
+
+.toolbox-tool-item {
+    display: flex;
+    align-items: flex-start;
+    padding: 12px;
+    margin-bottom: 10px;
+    background-color: rgba(255, 255, 255, 0.05);
+    border: 2px solid transparent;
+    cursor: url('../assets/cursor-retro-hover.svg') 1 1, pointer;
+    transition: all 0.2s ease;
+}
+
+.toolbox-tool-item:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+    border-color: var(--color-white);
+}
+
+.toolbox-tool-item:last-child {
+    margin-bottom: 0;
+}
+
+.toolbox-tool-icon {
+    font-size: 32px;
+    margin-right: 15px;
+    flex-shrink: 0;
+    line-height: 1;
+}
+
+.toolbox-tool-info {
+    flex: 1;
+}
+
+.toolbox-tool-name {
+    color: var(--color-white);
+    font-size: var(--font-size-base);
+    font-weight: 700;
+    margin-bottom: 5px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.toolbox-tool-description {
+    color: rgba(255, 255, 255, 0.8);
+    font-size: 48px;
+    line-height: 1.5;
+}
+
+/* Scrollbar styling for tools list (Fallout-style) */
+.toolbox-tools-list::-webkit-scrollbar {
+    width: 8px;
+}
+
+.toolbox-tools-list::-webkit-scrollbar-track {
+    background: rgba(255, 255, 255, 0.1);
+}
+
+.toolbox-tools-list::-webkit-scrollbar-thumb {
+    background: var(--color-white);
+    border: 1px solid var(--color-black);
+}
+
+.toolbox-tools-list::-webkit-scrollbar-thumb:hover {
+    background: rgba(255, 255, 255, 0.8);
+}
+
+/* ============================================
+   Responsive Design
+   ============================================ */
+@media (max-width: 768px) {
+    .toolbox-popup {
+        width: calc(100vw - 40px);
+        right: 20px;
+        left: 20px;
+        bottom: 120px;
+    }
+    
+    .toolbox-container {
+        bottom: 15px;
+        right: 15px;
+        width: 60px;
+        height: 60px;
+    }
+}
+

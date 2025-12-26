@@ -48,7 +48,7 @@
 }
 
 .home-name {
-    font-size: clamp(1.5rem, 4vw, 2.5rem);
+    font-size: clamp(3rem, 8vw, 6rem);
     font-weight: 700;
     margin: 0;
     margin-bottom: var(--spacing-lg);
@@ -68,11 +68,11 @@
 
 .nav-button {
     position: relative;
-    width: 200px;
-    height: 60px;
+    width: 180px;
+    height: 50px;
     border: none;
     background: transparent;
-    cursor: url('../assets/cursor-burger-hover.svg') 12 12, pointer;
+    cursor: url('../assets/cursor-retro-hover.svg') 1 1, pointer;
     padding: 0;
     text-align: left;
 }
@@ -89,16 +89,19 @@
 .nav-button-text {
     position: relative;
     z-index: 10;
-    font-size: var(--font-size-lg);
+    font-size: 32px;
     font-weight: 600;
     color: var(--color-black) !important;
-    padding-left: var(--spacing-sm);
+    padding-left: var(--spacing-xs);
     display: flex;
     align-items: center;
     height: 100%;
     pointer-events: none;
     opacity: 1 !important;
     visibility: visible !important;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 
 .nav-button:hover .nav-button-text {
@@ -129,7 +132,7 @@
     font-size: var(--font-size-lg);
     font-weight: 600;
     color: var(--color-black);
-    cursor: url('../assets/cursor-burger-hover.svg') 12 12, pointer;
+    cursor: url('../assets/cursor-retro-hover.svg') 1 1, pointer;
     margin-bottom: var(--spacing-lg);
     padding: var(--spacing-xs) 0;
     transition: opacity 0.3s ease;
@@ -157,7 +160,7 @@
     }
     
     .nav-button-text {
-        font-size: var(--font-size-base);
+        font-size: 28px;
     }
 }
 
